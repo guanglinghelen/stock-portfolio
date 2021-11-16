@@ -1,3 +1,4 @@
+import pytest
 from portfolio import Portfolio
 
 def test_empty_portfolio():
@@ -17,9 +18,5 @@ def test_multiple():
 
 def test_not_enough():
     p=Portfolio()
-    try:
-         p.buy('IBM')
-    except TypeError():
-        pass
-    else:
-        assert False,'error'
+    with pytest.raises(TypeError):
+        p.buy('IBM')
