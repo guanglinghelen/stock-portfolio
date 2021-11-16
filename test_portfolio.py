@@ -22,4 +22,4 @@ def test_not_enough():
     except TypeError():
         pass
     else:
-        assert False
+        assert False,'error'
