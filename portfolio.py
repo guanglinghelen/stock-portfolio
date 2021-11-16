@@ -30,3 +30,8 @@ class Portfolio:
         return sum(
             shares*price for _,shares, price in self._stocks #_means unpack
         )
+class Shares:
+    def__init__(self,name,nuber,price):
+        self.name=name
+        self.number=number
+        self.price=price
