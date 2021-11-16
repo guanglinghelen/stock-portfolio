@@ -15,6 +15,6 @@ def test_multiple():
     p.buy("HPQ", 100, 36.15)
     assert p.cost() == 21263.0
 
-def test_not_enough(:
+def test_not_enough():
     p=Portfolio()
     p.buy('IBM')
