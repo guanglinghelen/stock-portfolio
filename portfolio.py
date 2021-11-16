@@ -24,14 +24,14 @@ class Portfolio:
         self._stocks=[]
 
     def buy(self,name,shares,price):
-        self._stocks.append((name,shares,price))
+        self._stocks.append(shares)
 
     def cost(self):
         return sum(
-            shares*price for _,shares, price in self._stocks #_means unpack
+            shares.number*shares.price for shares in self._stocks #_means unpack
         )
 class Shares:
-    def__init__(self,name,nuber,price):
+    def __init__(self,name,number,price):
         self.name=name
         self.number=number
         self.price=price
