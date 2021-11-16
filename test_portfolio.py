@@ -17,4 +17,9 @@ def test_multiple():
 
 def test_not_enough():
     p=Portfolio()
-    p.buy('IBM')
+    try:
+         p.buy('IBM')
+    except TypeError():
+        pass
+    else:
+        assert False
